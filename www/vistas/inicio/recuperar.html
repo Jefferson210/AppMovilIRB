@@ -1,0 +1,57 @@
+<!--<ion-view  class="fondo-app" view-title="<div class='title margin-izq' ><img class='title-image' src='img/logotipo_reserva.png' /></div> " >-->
+<ion-modal-view >     
+  <ion-content  class="contenido-login registro"  overflow-scroll='false'  > 
+
+    <div class="row" style="height: 40px !important; " >
+      <div class="col col-90" style="height: 0px !important;" >
+
+      </div>
+
+
+    <!--  <div class="col col-10" style="height: 40px !important;">
+       <a id="closebtn"  href=""  ng-click="closeRecup()">
+        <i class="icon ion-close-circled"></i>
+      </a>
+    </div>-->
+
+
+
+  
+  </div>
+  <div class="list">
+    <div class="item">
+      <div class="text-center espacio-top">
+        <!--<img src='img/logo_reserva.svg'  width="160px" />-->
+      </div>
+    </div>
+  </div>
+  <label><h2  style="text-align: center; color: black;" >Recuperacion Contraseña</h2></label>
+  <form ng-submit="RecuperaCorreo()" >
+    <div class="list forma-login">  
+     <br>
+     <br>
+     
+     <label class="item item-input border-inferior">          
+      <i class="icon ion-ios-email-outline placeholder-icon enlace black"></i>
+      <input  class=" white" type="email" ng-model="UserRecup.correo" placeholder="Ingrese el correo registrado" autofocus>
+    </label>     
+
+    <label class="item item-input ingresar" >
+      <button class="button button-block colorbtn " type="submit"  ng-disabled="!UserRecup.correo" >
+        Recuperar
+      </button>
+    </label>  
+    <label class="item item-input ingresar" >
+      <button class="button button-block colorbtn" type="button" ng-click="closeRecup()" >
+        Cerrar
+      </button>
+    </label>      
+
+
+
+  </div>
+</form>
+</ion-content>  
+</ion-modal-view>
+<!--</ion-view>-->
+

@@ -1,0 +1,94 @@
+<!--<ion-view  class="fondo-app" view-title="<div class='title margin-izq' ><img class='title-image' src='img/logotipo_reserva.png' /></div> " >-->
+<ion-modal-view >     
+  <ion-content  class="contenido-login registro" scroll="true"> 
+
+    <div class="row" style="height: 0px !important; " >
+      <div class="col col-90" style="height: 0px !important;" >
+
+      </div>
+      <!--<div class="col col-10" style="height: 40px !important;">
+       <a id="closebtn"  href=""  ng-click="closeR()">
+        <i class="icon ion-close-circled"></i>
+      </a>
+    </div>-->
+  </div>
+
+  <div class="list">
+    <!--<div class="item">
+      <div class="text-center espacio-top">
+        <img src='img/logo_reserva.svg'  width="160px" />
+      </div>
+    </div>-->
+  </div>
+  <label><h2  style="text-align: center; color: black;" >Registro</h2></label>
+  <br>
+  <form ng-submit="RegistrarUsuario()" >
+    <div class="list forma-login"> 
+     <label class="item item-input border-inferior " style="padding-left: 14px;border-left-width: 2px;">
+   <i class="icon ion-ios-person-outline placeholder-icon enlace black"></i>
+   <input  type="text" ng-model="userRegistro.nombre" placeholder="Nombre *" autofocus>
+ </label>
+ <br>
+   <label class="item item-input border-inferior " style="padding-left: 14px;border-left-width: 2px;">
+   <i class="icon ion-ios-person-outline placeholder-icon enlace black"></i>
+   <input  type="text" ng-model="userRegistro.apellido" placeholder="Apellido *">
+ </label>
+ <br>
+ <label class="item item-input border-inferior " style="padding-left: 14px;border-left-width: 2px;">
+<i class="icon ion-podium placeholder-icon enlace black"></i>
+<input  type="text" ng-model="userRegistro.empresa" placeholder="Empresa *">
+</label>
+<br>
+<label class="item item-input border-inferior">          
+  <i class="icon ion-folder placeholder-icon enlace black"></i>
+  <input   type="text" ng-model="userRegistro.cargo" placeholder="Cargo *" id="correoReg">
+</label> 
+
+<br>
+<label class="item item-input border-inferior">          
+  <i class="icon ion-ios-email-outline placeholder-icon enlace black"></i>
+  <input   type="email" ng-model="userRegistro.correo" placeholder="Correo *" />
+</label>
+<br>
+<label class="item item-input border-inferior ">
+  <i class="icon ion-ios-locked-outline placeholder-icon enlace black"></i>
+  <input  type="password" ng-model="userRegistro.clave" placeholder="Contraseña *" id="claveReg" minlength="6">
+</label>
+<br>
+<label class="item item-input border-inferior ">
+  <i class="icon ion-ios-locked-outline placeholder-icon enlace black"></i>
+  <input  type="password" ng-model="userRegistro.confirmaclave" placeholder="Confirma Contraseña *" minlength="6"
+  >
+</label>
+<br>  
+<label>
+ <h2  style="color: black; font-size: 14px;"> * Campos Obligatorios.</h2>
+</label>
+<div class="row">
+  <div class="col col-50">
+    <label class="item item-input ingresar" >
+      <button class="button button-block  " type="submit" ng-disabled="!userRegistro.nombre || !userRegistro.empresa || !userRegistro.cargo ||!userRegistro.correo || !userRegistro.clave || !userRegistro.confirmaclave || !userRegistro.apellido" style="background-color: #a2a2a2">
+        <p style="text-align: center;padding-right: 10px; color:white; ">Registrar</p>
+      </button>
+    </label> 
+
+  </div>
+
+  <div class="col col-50">
+    <label class="item item-input ingresar" >
+      <button class="button button-block  " type="button"  ng-click="closeR()" style="background-color: #a2a2a2">
+        <p style="text-align: center;padding-right: 10px;color: white;">Cerrar</p>
+        
+      </button>
+    </label> 
+  </div>
+
+</div>
+
+
+</div>
+</form>
+</ion-content>  
+</ion-modal-view>
+<!--</ion-view>-->
+

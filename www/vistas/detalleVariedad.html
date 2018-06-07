@@ -1,0 +1,84 @@
+<ion-view  cache-view="false">
+<!--<div class="bar bar-subheader" >
+  <h2 class="title">{{estadoNombre}}</h2>
+</div>-->
+<ion-content>    
+
+
+  <div class="item item-avatar">
+    <img src="{{variedad.imagen}}">
+    <h2>{{variedad.nombre}}</h2>
+    <p>{{variedad.lugar}}</p>
+  </div>
+
+  <div class="item item-body">
+    <img class="full-image" src="{{variedad.imagen}}">
+
+   
+  </div>
+
+
+
+
+  <div class="list card" style="margin-bottom: 0px;">
+
+<br>  
+  <div  class="item item-icon-left hcomplete">
+    <i class="icon ion-information-circled " style="font-size: 18px;"></i>
+    COLOR : {{variedad.color}}
+  </div>
+  <br>
+
+  <div  class="item item-icon-left hcomplete">
+    <i class="icon ion-information-circled" style="font-size: 18px;"></i>
+     TAMAÑO DE BOTON : {{variedad.tamboton}}
+  </div>
+  <br>
+
+  <div  class="item item-icon-left hcomplete">
+    <i class="icon ion-information-circled" style="font-size: 18px;"></i>
+     LONGITUD: {{variedad.longitud}}
+  </div>
+  <br>
+
+  <div  class="item item-icon-left hcomplete">
+    <i class="icon ion-information-circled" style="font-size: 18px;"></i>
+     NUMERO DE PETALOS : {{variedad.numpetalos}}
+  </div>
+  <br>
+  <div  class="item item-icon-left hcomplete">
+    <i class="icon ion-information-circled" style="font-size: 18px;"></i>
+     TAMAÑO DE BOTON : {{variedad.tamboton}}
+  </div>
+ 
+<br>
+ 
+
+</div>
+
+<p>
+
+  <div class="row">
+    
+    <div class="col col-75">
+      
+    </div>
+    <div class="col col-25" ng-click="muestras()" >
+      <a class="subdued">
+         <i class="icon ion-thumbsup" style="font-size: 25px" id="Like"></i>
+
+
+      {{Like}} Like</a>
+    </div>
+  </div>
+      
+      
+    </p>
+  
+
+
+
+
+
+</ion-content>   
+</ion-view>

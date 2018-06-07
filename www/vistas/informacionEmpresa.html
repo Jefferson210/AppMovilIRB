@@ -1,0 +1,33 @@
+<ion-view >
+	<!--<ion-refresher spinner="bubbles" on-refresh="listaRefrescar()"></ion-refresher>-->
+	<ion-content >
+		<br><br>
+		<h1 class="centrarTexto">{{empresa.nombre}}</h1>
+		<h1 class="centrarTexto">
+			<img src="{{empresa.imagen}}" alt="">
+		</h1>
+		<div class="row" >
+			<div class="col col-10"></div>
+			<div class="col col-80">
+				<h2 class="parrafo"  ng-show="opcion==1">{{empresa.mision}}</h2>
+				<h2 class="parrafo"  ng-show="opcion==2">{{empresa.vision}}</h2>
+			</div>
+			<div class="col col-10"></div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col col-10"></div>
+
+			<div class="col col-80">
+				<button class="button button-block  colorbtn" ng-click="cerrarModal()">
+					Cerrar
+				</button>
+
+			</div>
+			<div class="col col-10"></div>
+		</div>
+		
+	</ion-content>
+</ion-view>

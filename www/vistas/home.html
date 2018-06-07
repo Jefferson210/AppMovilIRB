@@ -1,0 +1,13 @@
+<ion-view title="Empresas" cache-view="false"  hide-nav-bar="false" >
+    <!--<ion-refresher spinner="bubbles" on-refresh="listaRefrescar()"></ion-refresher>-->
+    <ion-content>
+        
+        <ion-slide-box auto-play="false" does-continue="true" slide-interval="5000" loop="true" id="carrusel">
+            <ion-slide ng-repeat="categoria in categorias " >
+                <div class="promociones-home" style="background-image: url('{{categoria.imagen}}')" ng-click="detalleEvnt({{categoria.id}})">
+                </div>
+                
+            </ion-slide>
+        </ion-slide-box >
+</ion-content>
+</ion-view>

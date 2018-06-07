@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "217038224120",
+    "firebase_url": "https://scala-181221.firebaseio.com",
+    "project_id": "scala-181221",
+    "storage_bucket": "scala-181221.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:217038224120:android:2f5ffb4e1f8a6765",
+        "android_client_info": {
+          "package_name": "com.misiva.scala"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "217038224120-oetmppdsdaadstvcq8bu6qankq7aa9fq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4cpdjSyC-O5Fd2m8oT9mrbGqS58Y3d28"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

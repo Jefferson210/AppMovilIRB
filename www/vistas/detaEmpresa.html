@@ -1,0 +1,34 @@
+<ion-view title="{{empresa.nombre}}" >
+<!--<div class="bar bar-subheader" >
+  <h2 class="title">{{estadoNombre}}</h2>
+</div>-->
+<ion-content  class="margin-top50">        
+  <!--<div class=" item2 padding0 item-thumbnail-lef" >-->
+    <!-- <div class="list card detalle-card">-->
+      <div class="item-body">
+        <br>
+        <img class="full-image" src="{{empresa.imagen}}">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col col-50" style="height: 80px !important"><a class="enlace" href="" ng-click="DatosEmpresa(1)">Misión</a></div>
+          <div class="col col-50" style="height: 80px !important"><a class="enlace" href="" ng-click="DatosEmpresa(2)">Visión</a></div>
+        </div>
+        <div class="row">
+          <div class="col col-10"></div>
+          <div class="col col-80" s>
+            <button class="button button-block  colorbtn" ng-click="Catologo({{empresa.id}})">
+              Catalogo
+            </button>
+            <br>
+            <button class="button button-block  colorbtn" ng-click="contactos()">
+              Contactos
+            </button>
+
+          </div>
+          <div class="col col-10"></div>
+        </div>
+</ion-content>   
+</ion-view>

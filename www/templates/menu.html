@@ -1,0 +1,97 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-header>
+        <ion-nav-buttons side="left">
+          <button class="button button-icon button-clear ion-navicon white" menu-toggle="left" id="logoToggle" >
+          </button>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right">
+        <!--  <button class="button button-clear ion-search white" id="logoSearch"></button>
+      </button>-->
+
+    </ion-nav-buttons>
+    
+
+
+
+  </ion-header>
+
+
+
+
+</ion-nav-bar>
+
+<ion-nav-view name="menuContent"></ion-nav-view>
+
+</ion-side-menu-content>
+
+
+<ion-side-menu side="left" id="menu">
+
+  <ion-content ng-controller="HomeCtrl">
+    <ion-list>
+      <ion-item class="Navbargreen">
+
+       <!-- <img src="img/avatar.png" alt="" ng-show="foto==null">
+       <img src="{{foto}}" alt="" id="foto" ng-show="foto!=null" class="avatar">-->
+
+
+       <br>
+
+       <p class="white" style="margin-bottom: 0px;" id="nombre" ng-show="sesion==2">Usuario</p>
+       <p class="white" style="margin-bottom: 10px;" id="correo" ng-show="sesion==2">Correo</p>
+       <p  style="margin-bottom: 0px; color: rgba(0,0,0,0) !important;" id="nombre" ng-show="sesion==0">Usuario</p>
+       <p  style="margin-bottom: 10px; color: rgba(0,0,0,0) !important;" id="correo" ng-show="sesion==0">Correo</p>
+
+      
+
+     </ion-item>
+     <ion-item menu-close href="#/app/home">
+      <i >
+        <div class="row row itemP">
+          <i class="icon ion-home " style="font-size: 30px"></i>
+         <p id="item" >Empresas</p>
+       </div>
+     </i>
+   </ion-item>
+   <hr>
+
+       <!-- <ion-item class="itemP" menu-close href="#/app/novedades">
+          <i >
+              <div class="row itemS ">
+                 <img src="img/iconos/marcas.png" alt="">
+                 <p id="item">Novedades</p>
+              </div>
+            
+            </i>
+          </ion-item>-->
+
+          <ion-item menu-close href="#/app/busqueda">
+            <i >
+              <div class="row itemS ">
+                   <i class="icon  ion-android-search " style="font-size: 30px"></i>
+               <p id="item">Buscar ShowRoom</p>
+             </div>
+
+           </i>
+         </ion-item>
+          <hr>
+
+          <ion-item menu-close ng-click="Cerrarsesion()" >
+            <i >
+              <div class="row itemS ">
+                   <i class="icon  ion-close-circled " style="font-size: 30px"></i>
+               <p id="item">Cerrar Sesión</p>
+             </div>
+
+           </i>
+         </ion-item>
+
+</ion-list>
+</ion-content>
+</ion-side-menu>
+</ion-side-menus>

@@ -1,0 +1,35 @@
+<ion-view cache-view="false" title="Variedades">
+
+
+  <!--<ion-infinite-scroll 
+  ng-if="canLoadMore"
+  on-infinite="loadMoreData()"
+  distance="35%">
+</ion-infinite-scroll>-->
+
+
+
+<ion-content id="marcasContent" ng-disabled="enable">
+ <ion-refresher spinner="bubbles" on-refresh="listaRefrescar('')"></ion-refresher>
+
+
+ <div ion-fixed  class="row ColScala" scroll="false">
+   <div class="col list-inset" style="height: 30px !important; padding-top: 5px ">
+     <label class="item item-input" style="padding-top: 0px !important; padding-left: 8px;">                   
+       <input type="text" placeholder="Buscar..." class="input-buscar" ng-model="search2"  style="padding-left:0px !important">
+       <i class="icon ion-search placeholder-icon" style="padding-right: 5px;"></i>
+     </label>
+   </div>
+ </div>
+ <br>
+<div class="list card" ng-repeat="variedad in variedades | orderBy:'variedad.nombre' |filter:search2 ">
+  <div class="item item-body" ng-click="detVariedad({{variedad.idvariedad}})">
+    <h1 class="centrarTexto">{{variedad.nombre}}</h1>
+    <img class="full-image" src="{{variedad.imagen}}" style="padding-bottom: 20px">
+  </div>
+</div>
+</div>
+</ion-content>
+</ion-view>
+
+

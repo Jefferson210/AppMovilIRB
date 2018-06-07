@@ -1,0 +1,54 @@
+
+<ion-modal-view >     
+  <ion-content  class="contenido-login " scroll="true"> 
+<br>
+    <h2 style="text-align: center;">Lista de Intereses</h2>
+  <form ng-submit="RegistrarIntereses()" >
+    <br>
+
+    
+
+    <div class="list forma-login"> 
+     <label class="item item-input border-inferior " style="padding-left: 14px;border-left-width: 2px;">
+   <i class="icon ion-calendar enlace black"></i>
+   <input  type="date" ng-model="userRegistro.muestra" placeholder=" Muestra" autofocus>
+ </label>
+ <br>
+   <label class="item item-input border-inferior " style="padding-left: 14px;border-left-width: 2px;">
+   <i class="icon ion-erlenmeyer-flask enlace black"></i>
+   <input  type="number" ng-model="userRegistro.Pcampo" placeholder=" Prueba de Campo">
+ </label>
+ <br>
+ <label class="item item-input border-inferior " style="padding-left: 14px;border-left-width: 2px;">
+<i class="icon ion-podium placeholder-icon enlace black"></i>
+<input  type="text" ng-model="userRegistro.comercial" placeholder=" Comercial">
+</label>
+<br>
+<div class="row">
+  <div class="col col-50">
+    <label class="item item-input ingresar" >
+      <button class="button button-block  " type="submit" ng-disabled="!userRegistro.muestra || !userRegistro.Pcampo || !userRegistro.comercial " style="background-color: #a2a2a2">
+        <p style="text-align: center;padding-right: 10px; color:white; ">Finalizar</p>
+      </button>
+    </label> 
+
+  </div>
+
+  <div class="col col-50">
+    <label class="item item-input ingresar" >
+      <button class="button button-block  " type="button"  ng-click="closeR()" style="background-color: #a2a2a2">
+        <p style="text-align: center;padding-right: 10px;color: white;">Cerrar</p>
+        
+      </button>
+    </label> 
+  </div>
+
+</div>
+
+
+</div>
+</form>
+</ion-content>  
+</ion-modal-view>
+<!--</ion-view>-->
+
