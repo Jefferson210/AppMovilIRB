@@ -1,96 +1,67 @@
 <!--<ion-view  class="fondo-app" view-title="<div class='title margin-izq' ><img class='title-image' src='img/logotipo_reserva.png' /></div> " >-->
- 
+
 <ion-view hide-nav-bar="true" drag-content="false" > 
-   
-  <ion-content  class="contenido-login registro" scroll='true' > 
+    <ion-content  class="contenido-login registro" scroll='true' > 
+        <br>
+        <label><h2  style="text-align: center; color: black" >Ingreso</h2></label>
+        <h1 class="centrarTexto ">  
+            <i class="icon ion-person" style="font-size: 90px;"></i>
+        </h1>
+        <form ng-submit="LoginUser()" >
+            <div class="list forma-login">  
+                <p id="mensaje"></p>
+                <label class="item item-input border-inferior">          
+                    <i class="icon ion-ios-email-outline placeholder-icon black " style="font-size: 28px;"></i>
+                    <input  type="email" ng-model="userLogin.correo" placeholder="Correo electrónico" autofocus>
+                </label>     
 
+                <br>
+                <label class="item item-input border-inferior black ">
+                    <i class="icon ion-ios-locked-outline placeholder-icon black" style="font-size: 28px;"></i>
+                    <input  type="password" ng-model="userLogin.clave" placeholder="Contraseña">
+                </label>
+                <label class="item item-input ingresar" >
+                    <button class="button button-block  " type="submit" ng-disabled="!userLogin.correo || !userLogin.clave " style="background-color: #a2a2a2"> 
+                        Ingresar
+                    </button>
+                </label>  
+                <div class="row" style="height: 50px;">
+                    <div class="col col-50" ng-click="RecupClave()">
+                        <p class="black" >¿Olvidaste tu contraseña?</p>
+                    </div>
 
-<br>
-  <label><h2  style="text-align: center; color: black" >Ingreso</h2></label>
-<h1 class="centrarTexto ">  
+                    <div class="col col-50" ng-click="registroUsuario()">
+                        <p class="black" style="text-align: center; padding-left: 20px;">
+                            Crear una cuenta
+                        </p>
+                    </div>
+                </div>
 
+                <label class="item item-input ingresar" >
 
-  <i class="icon ion-person" style="font-size: 90px;"></i>
-</h1>
-  <form ng-submit="LoginUser()" >
-    <div class="list forma-login">  
-
-
-     
-  
-     <p id="mensaje"></p>
-  
-
-     <label class="item item-input border-inferior">          
-      <i class="icon ion-ios-email-outline placeholder-icon black " style="font-size: 28px;"></i>
-      <input  type="email" ng-model="userLogin.correo" placeholder="Correo electrónico" autofocus>
-    </label>     
-
-<br>
-    <label class="item item-input border-inferior black ">
-      <i class="icon ion-ios-locked-outline placeholder-icon black" style="font-size: 28px;"></i>
-      <input  type="password" ng-model="userLogin.clave" placeholder="Contraseña">
-    </label>
-
-
-
-    <label class="item item-input ingresar" >
-      <button class="button button-block  " type="submit" ng-disabled="!userLogin.correo || !userLogin.clave " style="background-color: #a2a2a2"> 
-        Ingresar
-      </button>
-      
-    </label>  
-             
-          
-
-    <div class="row" style="height: 50px;">
-      <div class="col col-50" ng-click="RecupClave()">
-      
-      <p class="black" >¿Olvidaste tu contraseña?</p>
-    
-      </div>
-
-
-      <div class="col col-50" ng-click="registroUsuario()">
-      <p class="black" style="text-align: center; padding-left: 20px;">
-        Crear una cuenta
-      </p>
-      </div>
-    </div>
-
-    <label class="item item-input ingresar" >
-
-   <!-- <button class="button button-block " type="button" style="height: 47px; background-color: #405D9B" ng-click="InitFB()">
-        <div class="row">
-          <div class="col col-10 icon ion-social-facebook" style="padding-top: 0px; color: white">
-           
-          
-         </div>
-
-         <hr style="height: 35px;
-         margin-top: 0px;
-         margin-bottom: 0px;">
-         <div class="col col-80" style="padding-top: 0px; color: white;" >
-          
-          Ingresar con Facebook
-        </div>
-
-      </div>
-
-
-    </button>-->
-  </label>   
-
+                    <!-- <button class="button button-block " type="button" style="height: 47px; background-color: #405D9B" ng-click="InitFB()">
+<div class="row">
+<div class="col col-10 icon ion-social-facebook" style="padding-top: 0px; color: white">
 
 
 </div>
-</form>
+
+<hr style="height: 35px;
+margin-top: 0px;
+margin-bottom: 0px;">
+<div class="col col-80" style="padding-top: 0px; color: white;" >
+
+Ingresar con Facebook
+</div>
+
+</div>
 
 
-
-
-</ion-content>  
-
+</button>-->
+                </label>   
+            </div>
+        </form>
+    </ion-content>  
 </ion-view>
 <!--</ion-view>-->
 

@@ -1,6 +1,3 @@
-
-
-
 app.controller('HomeCtrl', function ($scope, $stateParams, $ionicSlideBoxDelegate,HomeModel, $http,$state,$ionicLoading,$timeout,$cordovaInAppBrowser,$ionicModal,$cordovaFacebook,$ionicPopup,$ionicSideMenuDelegate, $cordovaDatePicker,$ionicSideMenuDelegate,$ionicNavBarDelegate,$ionicHistory,$cordovaGoogleAnalytics,$ionicLoading,$cordovaGoogleAnalytics) {
  $scope.$on('$ionicView.afterEnter', function(event) {
     $ionicSideMenuDelegate.canDragContent(true);

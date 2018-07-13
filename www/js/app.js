@@ -7,7 +7,14 @@
 var seccion2Tag = [];
 var filtro;
 
-var app =angular.module('starter', ['ionic', 'starter.controllers','ngCordova'])
+var app =angular.module('starter', ['ionic', 'starter.controllers','ngCordova','ng-token-auth'])
+
+.config(function($authProvider) {
+    $authProvider.configure({
+//        apiUrl: 'http://localhost:3000/api/v1'        
+        apiUrl: 'https://irb-v3-jefferson210.c9users.io:8080/api/v1'        
+    })
+})
 
 app.run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -34,15 +41,37 @@ app.config(function($stateProvider, $urlRouterProvider, $sceDelegateProvider,$co
         controller: 'AppCtrl'
     })
 
+    //        .state('app.login', {
+    //        url: '/login',
+    //        views: {
+    //            'menuContent': {
+    //                templateUrl: 'vistas/inicio/login.html',
+    //                controller: 'loginCtrl'
+    //            }
+    //        }
+    //    })
+
         .state('app.login', {
         url: '/login',
         views: {
             'menuContent': {
-                templateUrl: 'vistas/inicio/login.html',
-                controller: 'loginCtrl'
+                templateUrl: 'vistas/sign-in.html',
+                controller: 'signInCtrl'
             }
         }
     })
+    
+//    Jeff
+    .state('app.signUp', {
+        url: '/signUp',
+        views: {
+            'menuContent': {
+                templateUrl: 'vistas/sign-up.html',
+                controller: 'signUpCtrl'
+            }
+        }
+    })
+//    Jeff/
 
         .state('app.home', {
         url: '/home',
