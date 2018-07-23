@@ -7,14 +7,19 @@
 var seccion2Tag = [];
 var filtro;
 
-var app =angular.module('starter', ['ionic', 'starter.controllers','ngCordova','ng-token-auth'])
+//Jeff-start
+//var app =angular.module('starter', ['ionic', 'starter.controllers','ngCordova'])
+var app =angular.module('starter', ['ionic', 'starter.controllers','ngCordova','ng-token-auth','ngResource'])
+//Jeff-end
 
+//Jeff-start
 .config(function($authProvider) {
     $authProvider.configure({
-//        apiUrl: 'http://localhost:3000/api/v1'        
+        //        apiUrl: 'http://localhost:3000/api/v1'        
         apiUrl: 'https://irb-v3-jefferson210.c9users.io:8080/api/v1'        
     })
 })
+//Jeff-end
 
 app.run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -40,7 +45,7 @@ app.config(function($stateProvider, $urlRouterProvider, $sceDelegateProvider,$co
         templateUrl: 'templates/menu.html',
         controller: 'AppCtrl'
     })
-
+    //Jeff-start  
     //        .state('app.login', {
     //        url: '/login',
     //        views: {
@@ -60,9 +65,8 @@ app.config(function($stateProvider, $urlRouterProvider, $sceDelegateProvider,$co
             }
         }
     })
-    
-//    Jeff
-    .state('app.signUp', {
+
+        .state('app.signUp', {
         url: '/signUp',
         views: {
             'menuContent': {
@@ -71,7 +75,17 @@ app.config(function($stateProvider, $urlRouterProvider, $sceDelegateProvider,$co
             }
         }
     })
-//    Jeff/
+
+        .state('app.irbSelections', {
+        url: '/irbSelections',
+        views: {
+            'menuContent': {
+                templateUrl: 'vistas/irb-selections.html',
+                controller: 'irbCtrller'
+            }
+        }
+    })
+    //Jeff-end
 
         .state('app.home', {
         url: '/home',

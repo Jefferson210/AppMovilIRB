@@ -26,33 +26,33 @@ navigator.serviceWorker.register('service-worker.js')
         <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
 <link href="css/ionic.app.css" rel="stylesheet">
 -->
-        <!--        Jeff-->
-<!--        <script src="lib/angular/angular.js"></script>-->
-<!--
-        <script src="lib/angular-cookie.min.js"></script>
-        <script src="lib/ng-token-auth.min.js"></script>
--->
-        <!--        Jeff/-->
         <!-- ionic/angularjs js -->
         <script src="lib/ionic/js/ionic.bundle.js"></script>
         <!--<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>-->
 
         <!-- cordova script (this will be a 404 during development) -->
-
+        <script src="js/app.js"></script>
         <script src="cordova.js"></script>
         <script src="js/ng-cordova.min.js"></script>
         <div ng-view></div>
         <!-- your app's js -start-->
         <script src="js/jquery-3.2.1.min.js"></script>
-        <script src="js/app.js"></script>
+<!--        <script src="js/app.js"></script>-->
         <script src="js/controllers.js"></script>
         <script src="js/swiper.min.js"></script>
         <script src="js/jquery.cookie.js"></script>
         <script src="js/seguimiento.js"></script>
-        
-        
+        <!--        Jeff-start-->
         <script src="lib/angular-cookie.min.js"></script>
         <script src="lib/ng-token-auth.min.js"></script>
+        <script src="lib/angular/angular-resource.js"></script>
+        <!--        Jeff-end-->
+
+        <!--        modelos-->
+        <script src="modelos/Home.js"></script>        
+        <!--        Jeff-start-->
+        <script src="modelos/irb_selections_service.js"></script>
+        <!--        Jeff-end-->
 
         <!--       Controller-->
         <script src="controladores/AboutCtrl.js"></script>
@@ -61,11 +61,12 @@ navigator.serviceWorker.register('service-worker.js')
         <script src="controladores/EmpresaCtrl.js"></script>
         <script src="controladores/loginCtrl.js"></script>
         <script src="controladores/variedadesctrl.js"></script>
+        <!--        Jeff-start-->
+        <script src="controladores/file_properties.js"></script>
         <script src="controladores/sign-in-controller.js"></script>
         <script src="controladores/sign-up-controller.js"></script>
-
-        <!--        modelos-->
-        <script src="modelos/Home.js"></script>
+        <script src="controladores/irb-controller.js"></script>
+        <!--        Jeff-end-->
 
         <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
         <script type="text/javascript"> 

@@ -1,0 +1,15 @@
+<ion-view cache-view="false" title="Variedades">
+    <ion-content id="marcasContent" ng-disabled="enable">
+        <ion-refresher spinner="bubbles" on-refresh="listaRefrescar('')"></ion-refresher>
+        <br>
+        <div class="list card" ng-repeat="variedad in irbSelections">
+            <div class="item item-body">
+                <h1 class="centrarTexto">{{variedad.code}}</h1>
+<!--                <img class="full-image" src="{{variedad.Texto}}" style="padding-bottom: 20px">-->
+           <img class="full-image" data-ng-src="data:image/png;base64,{{variedad.imageBase64}}" style="padding-bottom: 20px" data-err-src="images/png/avatar.png"/>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+
+

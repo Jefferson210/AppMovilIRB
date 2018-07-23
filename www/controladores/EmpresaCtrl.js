@@ -1,57 +1,47 @@
-
 app.controller('EmpresaCtrl', function ($scope, $stateParams, $ionicSlideBoxDelegate,HomeModel, $http,$state,$ionicLoading,$timeout,$cordovaGoogleAnalytics,$ionicModal) {
-	
-	$scope.empresa= HomeModel.empresa;
 
-	$ionicModal.fromTemplateUrl('vistas/informacionEmpresa.html', {
-		scope: $scope
-	}).then(function(modal) {
-		$scope.infoempresa = modal;
-	});
+    $scope.empresa= HomeModel.empresa;
 
-	$scope.DatosEmpresa=function(opcion){
+    $ionicModal.fromTemplateUrl('vistas/informacionEmpresa.html', {
+        scope: $scope
+    }).then(function(modal) {
+        $scope.infoempresa = modal;
+    });
 
-		if(opcion==1){
+    $scope.DatosEmpresa=function(opcion){
 
-			$scope.opcion = 1; 
-		}
-		else{
+        if(opcion==1){
 
-			$scope.opcion = 2; 
-		}
+            $scope.opcion = 1; 
+        }
+        else{
 
-		$scope.closeLogin();
-		$scope.infoempresa.show();
-	}
+            $scope.opcion = 2; 
+        }
 
+        $scope.closeLogin();
+        $scope.infoempresa.show();
+    }
 
+    $scope.cerrarModal=function(){
 
-
-
-
-	$scope.cerrarModal=function(){
-
-		$scope.infoempresa.hide();
-	}
+        $scope.infoempresa.hide();
+    }
 
 
-	$scope.Catologo=function(id){
-
-			location.href = "#/app/variedades/"+id;
-
-
-	}
+    $scope.Catologo=function(id){
+        location.href = "#/app/variedades/"+id;
+    }
 
 
-	$scope.contactos=function(){
-
- 
-
- location.href = "#/app/acerca";
-
-
-}
-
-
-
+    $scope.contactos=function(){
+        location.href = "#/app/acerca";       
+    }
+    
+    //        Jeff-start
+    $scope.goListRoses = function()
+    {
+        $state.go("app.irbSelections");
+    }
+    //        Jeff-end
 });

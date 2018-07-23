@@ -10,27 +10,23 @@ app.factory("HomeModel", function ($http) {
                 nombre:"Connectiflor S.A",
                 mision : "mision de la floricola Connectiflor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut ",
                 vision :"vision de la empresa 1",
-
-            }
-                      ,{
-                          id:2,
-                          imagen:"img/rosebreeders.png",
-                          nombre:"International Rose Breeders",
-                          mision:"mision de la empresa 2",
-                          vision :"vision de la empresa 2"
-                      },
-                      {
-                          id:3,
-                          imagen:"img/janspekrozen.png",
-                          nombre:"Jan Spek Rozen",
-                          mision:"mision de la empresa 3",
-                          vision:"vision de la empresa 3",
-
-                      }
-                     ]
+            },
+          {
+              id:2,
+              imagen:"img/rosebreeders.png",
+              nombre:"International Rose Breeders",
+              mision:"mision de la empresa 2",
+              vision :"vision de la empresa 2"
+          },
+          {
+              id:3,
+              imagen:"img/janspekrozen.png",
+              nombre:"Jan Spek Rozen",
+              mision:"mision de la empresa 3",
+              vision:"vision de la empresa 3",
+          }]
             return empresas;
         },
-
 
         getCatalogoEmpresa: function(){
             variedades=[{
