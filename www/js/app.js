@@ -15,8 +15,9 @@ var app =angular.module('starter', ['ionic', 'starter.controllers','ngCordova','
 //Jeff-start
 .config(function($authProvider) {
     $authProvider.configure({
-                apiUrl: 'http://localhost:3000/api/v1'        
-//        apiUrl: 'https://irb-v3-jefferson210.c9users.io:8080/api/v1'        
+        apiUrl: 'http://localhost:3000/api/v1',        
+        //        apiUrl: 'https://irb-v3-jefferson210.c9users.io:8080/api/v1',   
+        signOutUrl:              '/auth/sign_out'
     })
 })
 //Jeff-end

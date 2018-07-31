@@ -3,7 +3,7 @@ app.controller('signUpCtrl', function($scope, $auth,$state,$ionicPopup) {
         $auth.submitRegistration($scope.registrationForm)
             .then(function(resp) {
             // handle success response
-
+                
         })
             .catch(function(resp) {
             // handle error response
@@ -21,7 +21,7 @@ app.controller('signUpCtrl', function($scope, $auth,$state,$ionicPopup) {
      });
 
     $scope.$on('auth:registration-email-error', function(ev, reason) {
-        console.log(reason.errors)
+        //console.log(reason.errors)
         for(var i=0;i < reason.errors.full_messages.length;i++){
 //            console.log(i) 
             $ionicPopup.alert({            

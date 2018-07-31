@@ -2,6 +2,9 @@
     <ion-content id="marcasContent" ng-disabled="enable">
         <ion-refresher spinner="bubbles" on-refresh="listaRefrescar('')"></ion-refresher>
         <br>
+        
+        <button class="btn btn-primary btn-lg" ng-controller="logoutCtrl" ng-click='signOut()'>Sign out</button>
+        
         <div class="list card" ng-repeat="variedad in irbSelections">
             <div class="item item-body">
                 <h1 class="centrarTexto">{{variedad.code}}</h1>
