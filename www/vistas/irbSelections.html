@@ -1,0 +1,23 @@
+<ion-pane>
+    <ion-header-bar class="bar-stable">
+        <h1 class="title">IRB SELECTIONS</h1>          
+    </ion-header-bar>     
+    <ion-content>
+        <div ng-controller="logoutCtrl">            
+            <button class="btn btn-primary btn-lg" ng-click='signOut()'>Sign out</button>
+        </div>      
+        <ion-card ng-repeat="irbSelection in irbSelections">
+            <img class="full-image" data-ng-src="data:image/png;base64,{{irbSelection.imageBase64}}" style="padding-bottom: 20px" data-err-src="images/png/avatar.png"/>
+            <br>
+            <ion-card-content>
+                <ion-card-title>
+                    {{irbSelection.code}}
+                </ion-card-title>                
+                <a class="item item-icon-left assertive" ng-click="updateIRB({{irbSelection.id}},{{irbSelection.likes==null ? 0:irbSelection.likes}})">
+                    <i class="icon ion-thumbsup"></i>
+                    Like <i>{{irbSelection.likes}}</i>
+                </a>
+            </ion-card-content>
+        </ion-card>
+    </ion-content>
+</ion-pane>

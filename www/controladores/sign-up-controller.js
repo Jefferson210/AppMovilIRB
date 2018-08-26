@@ -1,5 +1,5 @@
 app.controller('signUpCtrl', function($scope, $auth,$state,$ionicPopup) {
-    $scope.handleRegBtnClick = function() {
+   /*$scope.handleRegBtnClick = function() {
         $auth.submitRegistration($scope.registrationForm)
             .then(function(resp) {
             // handle success response
@@ -9,10 +9,20 @@ app.controller('signUpCtrl', function($scope, $auth,$state,$ionicPopup) {
             // handle error response
 
         });
+    };*/
+    $scope.handleRegBtnClick = function() {
+      $auth.submitRegistration($scope.registrationForm)
+        .then(function() { 
+          $auth.submitLogin({
+            email: $scope.registrationForm.email,
+            password: $scope.registrationForm.password
+          });
+        });
     };
 
     $scope.$on('auth:registration-email-success', function(ev, message) {
         //alert("Welcome " + message.email);
+        console.log(message);
         var options = {
             animation: 'slide', 
             onTransitionEnd: function() {}

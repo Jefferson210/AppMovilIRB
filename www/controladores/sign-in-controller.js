@@ -22,7 +22,8 @@ app.controller('signInCtrl', function($scope, $auth, $window,$state,$ionicPopup)
     });
 
     $scope.$on('auth:login-error', function(ev, reason) {
-//        alert('auth failed because '+reason.errors[0]);        
+//        alert('auth failed because '+reason.errors[0]);   
+        console.log(reason);
         $scope.error = reason.errors[0];        
         $ionicPopup.alert({            
             title: 'Error',
